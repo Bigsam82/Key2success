@@ -23,5 +23,11 @@ namespace Key2success
             get { return this.WithDrawfunds; }
             set { this.WithDrawfunds = value; }
         }
+        public CheckingAcc(int withDrawfunds, int depositFunds)
+        {
+            this.withDrawfunds = withDrawfunds;
+            this.depositFunds = depositFunds;
+
+        }
     }
 }

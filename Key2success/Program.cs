@@ -10,6 +10,8 @@ namespace Key2success
     {
         static void Main(string[] args)
         {
+            MoneyParent moneyP = new MoneyParent("Scrooge McDuck", "SAM US SAVINGS BANK",0);
+            moneyP.BankInfo();
         }
     }
 }
