@@ -6,26 +6,55 @@ using System.Threading.Tasks;
 
 namespace Key2success
 {
-    class SavingsAcc
+    class SavingsAcc : MoneyParent
     {
-        private int withDrawfunds;
-        private int depositFunds;
+        private double overallBalance2;
+        protected double userinput1;
 
-        public int DepositFunds
+        protected double Userinput1
         {
-            get { return this.DepositFunds; }
-            set { this.DepositFunds = value; }
+            get { return this.Userinput1; }
+            set { this.Userinput1 = value; }
         }
-        public int WithDrawfunds
+        
+        public SavingsAcc(double overallBalance2, double userinput1) : base("Scrooge McDuck", "SAM US SAVINGS BANK", 0)
         {
-            get { return this.WithDrawfunds; }
-            set { this.WithDrawfunds = value; }
-        }
-        public SavingsAcc(int withDrawfunds, int depositFunds)
-        {
-            this.withDrawfunds = withDrawfunds;
-            this.depositFunds = depositFunds;
+            this.overallBalance2 = overallBalance2;
+            this.userinput1 = userinput1;
 
         }
+        public void PutIn2()
+        {
+            Console.WriteLine("How much will you deposit into your Savings account Mr. McDuck");
+            double userinput1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Savings account total is = " + "$" + userinput1);
+        }
+        public void Cashin3()
+        {
+            this.PutIn2();
+            return;
+        }
+        public double Takeaway2()
+        {
+            Console.WriteLine("How much would you like to withdraw from your Reserve account");
+            userinput1 = int.Parse(Console.ReadLine());
+            return userinput1;
+        }
+
+        public void Itsgone()
+        {
+            this.Takeaway2();
+        }
+        public void OverallBalance2()
+        {
+            double Takeaway2 = userinput1;
+            Console.WriteLine("You have now deducted: " +"$"+ Takeaway2);
+            Takeaway2 = int.Parse(Console.ReadLine());
+            return;
+        }
+        public void Lotal2()
+        {
+            this.OverallBalance2();
+        }
     }
-    }
+}

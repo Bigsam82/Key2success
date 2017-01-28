@@ -6,27 +6,54 @@ using System.Threading.Tasks;
 
 namespace Key2success
 {
-    class ReserveAcc
+    class ReserveAcc : MoneyParent
     {
-        private int withDrawfunds;
-        private int depositFunds;
 
+        private double overallBalance3;
+        protected double userinput1;
 
-        public int DepositFunds
+        protected double Userinput1
         {
-            get { return this.DepositFunds; }
-            set { this.DepositFunds = value; }
+            get { return this.Userinput1; }
+            set { this.Userinput1 = value; }
         }
-        public int WithDrawfunds
+        public ReserveAcc(double overallBalance3,double userinput1) : base("Scrooge McDuck", "SAM US SAVINGS BANK", 0)
         {
-            get { return this.WithDrawfunds; }
-            set { this.WithDrawfunds = value; }
+            this.overallBalance3 = overallBalance3;
+            this.userinput1 = userinput1;
+            
         }
-        public ReserveAcc(int withDrawfunds, int depositFunds)
+        public void PutIn3()
         {
-            this.withDrawfunds = withDrawfunds;
-            this.depositFunds = depositFunds;
+            Console.WriteLine("How much will you deposit into your Reserve account Mr. McDuck");
+            double userinput1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Reserve account total is = " + "$" + userinput1);
         }
-        
+        public void Cashin()
+        {
+            this.PutIn3();
+        }
+        public double Takeaway3()
+        {
+            Console.WriteLine("How much would you like to withdraw from your Reserve account");
+            userinput1 = int.Parse(Console.ReadLine());
+            return userinput1;
+        }
+        public void Itsgone()
+        {
+            this.Takeaway3();           
+        }
+        public void OverallBalance3()
+        {
+            double Takeaway3 = userinput1;
+            Console.WriteLine("You have now deducted: " + "$" + Takeaway3);
+            Takeaway3= int.Parse(Console.ReadLine());
+            return;
+        }
+        public void Lotal3()
+        {
+            this.OverallBalance3();
+        }
+
     }
 }
