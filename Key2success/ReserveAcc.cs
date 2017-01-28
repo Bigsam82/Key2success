@@ -8,19 +8,14 @@ namespace Key2success
 {
     class ReserveAcc : MoneyParent
     {
+        private string reserve;
 
-        private double overallBalance3;
-        protected double userinput1;
-
-        protected double Userinput1
+     
+        
+        public ReserveAcc(string reserve) : base("Scrooge McDuck", "SAM US SAVINGS BANK", 0,0,0)
         {
-            get { return this.Userinput1; }
-            set { this.Userinput1 = value; }
-        }
-        public ReserveAcc(double overallBalance3,double userinput1) : base("Scrooge McDuck", "SAM US SAVINGS BANK", 0)
-        {
-            this.overallBalance3 = overallBalance3;
-            this.userinput1 = userinput1;
+            this.reserve=reserve;
+       
             
         }
         public void PutIn3()
@@ -33,27 +28,13 @@ namespace Key2success
         {
             this.PutIn3();
         }
-        public double Takeaway3()
-        {
-            Console.WriteLine("How much would you like to withdraw from your Reserve account");
-            userinput1 = int.Parse(Console.ReadLine());
-            return userinput1;
-        }
+       
         public void Itsgone()
         {
-            this.Takeaway3();           
+            this.Takeaway();
+                  
         }
-        public void OverallBalance3()
-        {
-            double Takeaway3 = userinput1;
-            Console.WriteLine("You have now deducted: " + "$" + Takeaway3);
-            Takeaway3= int.Parse(Console.ReadLine());
-            return;
-        }
-        public void Lotal3()
-        {
-            this.OverallBalance3();
+      
         }
 
     }
-}

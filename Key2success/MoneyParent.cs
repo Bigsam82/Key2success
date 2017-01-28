@@ -11,6 +11,9 @@ namespace Key2success
         private string clientInformation;
         private string bankName;
 
+        protected double overallBalance;
+       // protected double userinput1;
+
         private int accountBalance;
 
 
@@ -20,11 +23,20 @@ namespace Key2success
             set { this.AccountBalance = value; }
         }
 
-        public MoneyParent(string clientInformation, string bankName, int accountBalances)
+        protected double OverallBalance
+        {
+            get { return this.OverallBalance; }
+            set { this.OverallBalance = value; }
+        }
+
+        public MoneyParent(string clientInformation, string bankName, int accountBalances, double overallBalance,double userinput)
         {
             this.clientInformation = "Scrooge McDuck";
             this.bankName = "SAM US SAVINGS BANK";
             this.accountBalance = 0;
+            this.overallBalance = overallBalance;
+           // this.userinput1 = userinput1;
+
         }
 
         public virtual void BankInfo()
@@ -33,10 +45,25 @@ namespace Key2success
             Console.WriteLine("You have three different accounts with " + bankName + "\n a Checking with a account balance of: " + "$" + accountBalance + "\n Savings with a account balance of: " + "$" + accountBalance + "\n and a Reserve account with a balance of: " + "$" + accountBalance);
 
         }
-       // public void Endgame()
-       // {
-         //   Console.WriteLine("Thank you for using " + bankName + "have a fantastic day");
-       // }
+        public void PutIn()
+        {
+            Console.WriteLine("How much will you deposit:");
+            double userinput1 = int.Parse(Console.ReadLine());
+            overallBalance += userinput1;
+            Console.WriteLine(" Account total is = " + "$" + overallBalance);
+        }
+        public void Takeaway()
+        {
+            Console.WriteLine("How much would you like to withdraw:");
+            double userinput1 = int.Parse(Console.ReadLine());
+            overallBalance = -userinput1;
+            Console.WriteLine("Your account overall balance: " + "$" + userinput1);
+
+        }
+        // public void Endgame()
+        // {
+        //   Console.WriteLine("Thank you for using " + bankName + "have a fantastic day");
+        // }
 
     }
 }
