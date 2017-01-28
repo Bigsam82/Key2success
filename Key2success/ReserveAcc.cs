@@ -14,27 +14,19 @@ namespace Key2success
         
         public ReserveAcc(string reserve) : base("Scrooge McDuck", "SAM US SAVINGS BANK", 0,0,0)
         {
-            this.reserve=reserve;
-       
-            
+            this.reserve=reserve;   
         }
-        public void PutIn3()
+        public void Typeaccount2()
         {
-            Console.WriteLine("How much will you deposit into your Reserve account Mr. McDuck");
-            double userinput1 = int.Parse(Console.ReadLine());
-            Console.WriteLine("Reserve account total is = " + "$" + userinput1);
+            Console.WriteLine("Your ending Reserve account balance is " +"$" +overallBalance);
         }
-        public void Cashin()
+        public void Tellem2()
         {
-            this.PutIn3();
+            this.Typeaccount2();
         }
-       
-        public void Itsgone()
-        {
-            this.Takeaway();
-                  
-        }
-      
-        }
+
+
+
+    }
 
     }

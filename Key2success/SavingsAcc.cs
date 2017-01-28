@@ -16,17 +16,16 @@ namespace Key2success
         {
             this.Savings= Savings;  
         }
-        
-        public void Cashin3()
+        public void Typeaccount1()
         {
-            this.PutIn();
-            return;
+            Console.WriteLine("Your ending savings account balance is " +"$"+ overallBalance);
         }
-       
-        public void Itsgone()
+        public void Tellem1()
         {
-            this.Takeaway();
+            this.Typeaccount1();
         }
-       
+
+
+
     }
 }

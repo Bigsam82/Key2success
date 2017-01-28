@@ -56,8 +56,8 @@ namespace Key2success
         {
             Console.WriteLine("How much would you like to withdraw:");
             double userinput1 = int.Parse(Console.ReadLine());
-            overallBalance = -userinput1;
-            Console.WriteLine("Your account overall balance: " + "$" + userinput1);
+            overallBalance -= userinput1;
+            Console.WriteLine("Your account overall balance: " + "$" + overallBalance);
 
         }
         // public void Endgame()
