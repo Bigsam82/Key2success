@@ -12,7 +12,7 @@ namespace Key2success
 
      
         
-        public ReserveAcc(string reserve) : base("Scrooge McDuck", "SAM US SAVINGS BANK", 0,0,0)
+        public ReserveAcc(string reserve) : base("Scrooge McDuck", "SAM US SAVINGS BANK", 233451, 0,0,0)
         {
             this.reserve=reserve;   
         }
@@ -25,8 +25,6 @@ namespace Key2success
             this.Typeaccount2();
         }
 
+       }
 
-
-    }
-
-    }
+      }

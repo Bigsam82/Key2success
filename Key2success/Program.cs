@@ -10,7 +10,7 @@ namespace Key2success
     {
         static void Main(string[] args)
         {
-            MoneyParent moneyP = new MoneyParent("Scrooge McDuck", "SAM US SAVINGS BANK", 0,0,0);
+            MoneyParent moneyP = new MoneyParent("Scrooge McDuck", "SAM US SAVINGS BANK", 233451, 0,0,0);
             moneyP.BankInfo();
 
             CheckingAcc check1 = new CheckingAcc("checking");
@@ -27,8 +27,12 @@ namespace Key2success
             resv1.PutIn();
             resv1.Takeaway();
             resv1.Typeaccount2();
-            
-            
+            resv1.Endgame();
+
+            //StreamBank str1 = new StreamBank();
+           // str1.ToString();
+
         }
     }
 }
+

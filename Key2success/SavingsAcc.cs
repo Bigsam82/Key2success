@@ -12,7 +12,7 @@ namespace Key2success
        
        
         
-        public SavingsAcc(string Savings) : base("Scrooge McDuck", "SAM US SAVINGS BANK", 0,0,0)
+        public SavingsAcc(string Savings) : base("Scrooge McDuck", "SAM US SAVINGS BANK", 233451, 0,0,0)
         {
             this.Savings= Savings;  
         }
