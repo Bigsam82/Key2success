@@ -8,13 +8,13 @@ namespace Key2success
 {
     class MoneyParent
     {
-        private string clientInformation;
+        private string clientInformation;//fields
         private string bankName;
        // private string reader;
        
 
         protected double overallBalance;
-       // protected double userinput1;
+       
 
         private int accountBalance;
         private int accountNumber;
@@ -31,7 +31,7 @@ namespace Key2success
             set { this.OverallBalance = value; }
         }
 
-        public MoneyParent(string clientInformation, string bankName,int accountNumber, int accountBalances, double overallBalance,double userinput)
+        public MoneyParent(string clientInformation, string bankName,int accountNumber, int accountBalances, double overallBalance,double userinput)//greeting when user opens account did not make code to generate random account number hard coded
         {
             this.clientInformation = "Scrooge McDuck";
             this.bankName = "SAM US SAVINGS BANK";
@@ -42,7 +42,7 @@ namespace Key2success
 
         }
 
-        public virtual void BankInfo()
+        public virtual void BankInfo()//method to produce greeting with time stamp pn it and account balances
         {
             Console.WriteLine("Hello " + clientInformation);
             Console.WriteLine("You have three different accounts with " + bankName + "\n a Checking with a account balance of: " + "$" + accountBalance + "\n Savings with a account balance of: " + "$" + accountBalance + "\n and a Reserve account with a balance of: " + "$" + accountBalance+" Your account number: " +accountNumber+ " \n will be used for all three accounts");
@@ -50,7 +50,7 @@ namespace Key2success
             Console.WriteLine(DateTime.Now);
 
         }
-        public void PutIn()
+        public void PutIn()//method to ask what would the user want to deposit and total balance after words this is inherited thru all 3 classes
         {
             Console.WriteLine("How much will you deposit:");
             double userinput1 = int.Parse(Console.ReadLine());
@@ -59,19 +59,20 @@ namespace Key2success
             Console.WriteLine("If you would like to quit press EXIT");
             
         }
-        public void Takeaway()
-        {
+        public void Takeaway()//method to ask what would the user want to withdraw and total balance after words this is inherited thru all 3 classes
+        
+            {
             Console.WriteLine("How much would you like to withdraw:");
             double userinput1 = int.Parse(Console.ReadLine());
             overallBalance -= userinput1;
             Console.WriteLine("Your account overall balance: " + "$" + overallBalance);
 
         }
-         public void Endgame()
+         public void Endgame()//message that closes out the program at the end is inherited from all three classes
         {
            Console.WriteLine("Thank you for using " + bankName + " have a fantastic day");
         }
-       // public void Strm()
+       // public void Strm()//method for streamwriter I could not get to work
        // {
        //     Console.WriteLine(reader);
         }

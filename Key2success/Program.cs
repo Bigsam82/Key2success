@@ -29,9 +29,9 @@ namespace Key2success
             resv1.Typeaccount2();
             resv1.Endgame();
 
-            //StreamBank str1 = new StreamBank();
-           // str1.ToString();
-
+            //StreamBank str1 = new StreamBank("C:/Documents/visual studio 2015/Projects/Key2success", 0, "bank.txt", null);
+            //str1.ToString();
+            //attempted try at streamwriter
         }
     }
 }
